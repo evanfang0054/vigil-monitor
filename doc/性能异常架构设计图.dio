@@ -1,0 +1,120 @@
+<mxfile host="65bd71144e">
+    <diagram id="performance-metrics" name="性能指标监控架构">
+        <mxGraphModel dx="1059" dy="592" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="33" value="性能指标采集层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="720" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="1. 页面加载指标&#xa;- FP/FCP/LCP&#xa;- TTI/FID/CLS&#xa;- DOM Ready/Load&#xa;- 白屏时间/首屏时间" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="33" vertex="1">
+                    <mxGeometry y="30" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="资源性能层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="720" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="1. 资源加载性能&#xa;- 资源加载时间&#xa;- 资源大小统计&#xa;- 资源优先级分析&#xa;- 缓存命中率" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="35" vertex="1">
+                    <mxGeometry y="30" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="网络性能层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="720" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="1. 网络请求性能&#xa;- DNS解析时间&#xa;- TCP连接时间&#xa;- 请求响应时间&#xa;- 网络状态监控" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="37" vertex="1">
+                    <mxGeometry y="30" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="性能分析层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="900" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="1. 性能数据分析&#xa;- 性能评分计算&#xa;- 性能趋势分析&#xa;- 性能瓶颈定位&#xa;- 性能对比分析" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="39" vertex="1">
+                    <mxGeometry y="30" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="优化建议层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="900" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="1. 性能优化建议&#xa;- 资源优化建议&#xa;- 代码优化建议&#xa;- 缓存优化建议&#xa;- 网络优化建议" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="41" vertex="1">
+                    <mxGeometry y="30" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="监控告警层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="900" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="1. 性能监控告警&#xa;- 性能阈值告警&#xa;- 性能异常告警&#xa;- 性能趋势告警&#xa;- 自定义告警规则" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="43" vertex="1">
+                    <mxGeometry y="30" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="33" target="39" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="35" target="41" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="37" target="43" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="性能指标监控系统" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="280" y="680" width="220" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="1meyT8CKVNyj0enuUDdE" name="异常监控架构">
+        <mxGraphModel dx="1112" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="100" value="异常监控系统架构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="280" y="40" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="异常捕获层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="100" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="1. JS异常捕获&#xa;- window.onerror&#xa;- window.addEventListener(&#39;error&#39;)&#xa;- window.addEventListener(&#39;unhandledrejection&#39;)&#xa;- try-catch&#xa;- Error Boundary" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="101" vertex="1">
+                    <mxGeometry y="30" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="异常分类层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="100" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="1. 异常类型&#xa;- 语法错误(SyntaxError)&#xa;- 类型错误(TypeError)&#xa;- 引用错误(ReferenceError)&#xa;- 网络错误(NetworkError)&#xa;- 业务错误(BusinessError)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="103" vertex="1">
+                    <mxGeometry y="30" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="异常处理层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="100" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="1. 异常处理策略&#xa;- 错误信息格式化&#xa;- 错误堆栈解析&#xa;- 错误来源追踪&#xa;- 错误去重处理&#xa;- 错误恢复机制" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="105" vertex="1">
+                    <mxGeometry y="30" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="异常上报层" style="swimlane;fontStyle=0;childLayout=stackStack;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="300" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="1. 上报方式&#xa;- Beacon API&#xa;- XMLHttpRequest&#xa;- Image对象&#xa;- fetch API&#xa;- 离线存储" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="107" vertex="1">
+                    <mxGeometry y="30" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="异常分析层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="300" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="1. 分析维度&#xa;- 错误率统计&#xa;- 影响用户数&#xa;- 错误分布&#xa;- 错误等级&#xa;- 错误趋势" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="109" vertex="1">
+                    <mxGeometry y="30" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="异常告警层" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="300" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="1. 告警策略&#xa;- 实时告警&#xa;- 告警级别&#xa;- 告警渠道&#xa;- 告警规则&#xa;- 告警收敛" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="111" vertex="1">
+                    <mxGeometry y="30" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="102" target="104" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="104" target="106" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="101" target="107" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="103" target="109" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="105" target="111" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

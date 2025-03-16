@@ -1,0 +1,4 @@
+packages:
+  - 'packages/*'
+  # 排除所有 packages 目录下的测试目录
+  - '!**/test/**' 

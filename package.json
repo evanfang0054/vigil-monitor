@@ -1,0 +1,46 @@
+{
+  "name": "sentinel",
+  "private": true,
+  "version": "0.0.1",
+  "description": "这是性能监控的项目",
+  "author": "evanfang",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "clean": "pnpm -r clean",
+    "format": "lint-staged"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "cross-env": "^7.0.2",
+    "ts-node": "^9.1.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "lint-staged": "^13.0.3",
+    "husky": "^9.1.1",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "conventional-changelog-conventionalcommits": "^4.5.0"
+  }
+}

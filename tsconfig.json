@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    // 指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES6'/'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+    "target": "ES5",
+    // 指定使用模块: 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'
+    "module": "CommonJS",
+    // 选择模块解析策略: 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    "moduleResolution": "node",
+    // 启用实验性的ES装饰器
+    "experimentalDecorators": true,
+    // 启用所有严格类型检查选项
+    "strict": true,
+    // 允许从没有设置默认导出的模块中默认导入
+    "esModuleInterop": true,
+    // 跳过声明文件的类型检查
+    "skipLibCheck": true,
+    // 保留JSX语法不做转换
+    "jsx": "preserve",
+    // 允许导入json模块
+    "resolveJsonModule": true,
+    // 允许从没有默认导出的模块中导入
+    "allowSyntheticDefaultImports": true,
+    // 保留const枚举声明
+    "preserveConstEnums": true,
+    // 强制文件名大小写一致
+    "forceConsistentCasingInFileNames": true,
+    // 允许未使用的标签
+    "allowUnusedLabels": true,
+    // 以严格模式解析并为每个源文件生成 "use strict"语句
+    "alwaysStrict": true,
+    // 允许到达的代码
+    "allowUnreachableCode": true,
+    // 基本路径
+    "baseUrl": ".",
+    // 路径映射，相对于baseUrl
+    "paths": {
+      "@sentinel/*": ["packages/*/src"]
+    },
+    // 生成相应的'.d.ts'文件
+    "declaration": true,
+    // 生成相应的'.map'文件
+    "sourceMap": true,
+    // 指定输出目录
+    "outDir": "dist",
+    // 若有未使用的局部变量则抛错
+    "noUnusedLocals": true,
+    // 若有未使用的参数则抛错
+    "noUnusedParameters": true,
+    // 不允许隐式返回
+    "noImplicitReturns": true,
+    // 防止switch语句贯穿
+    "noFallthroughCasesInSwitch": true,
+    // 编译过程中需要引入的库文件的列表
+    "lib": ["ES6", "DOM"]
+  },
+  // 需要编译的文件
+  "include": [
+    "packages/*/src/**/*.ts",
+    "packages/*/src/**/*.tsx",
+    "packages/*/src/**/*.js",
+    "packages/*/src/**/*.jsx"
+  ],
+  // 需要排除的文件
+  "exclude": ["node_modules", "dist"]
+}
