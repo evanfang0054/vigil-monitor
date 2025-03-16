@@ -2,7 +2,7 @@
   "name": "sentinel",
   "private": true,
   "version": "0.0.1",
-  "description": "这是性能监控的项目",
+  "description": "前端实时多维度监控分析告警，采集处理性能错误用户行为资源数据，提升系统稳定性与用户体验全流程。",
   "author": "evanfang",
   "license": "MIT",
   "scripts": {
