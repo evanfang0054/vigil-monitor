@@ -1,5 +1,5 @@
 {
-  "name": "@sentinel/performance-web",
+  "name": "@vigil-monitor/performance-web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

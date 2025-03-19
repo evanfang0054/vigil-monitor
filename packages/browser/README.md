@@ -3,5 +3,5 @@
 ## 安装
 
 ```bash
-pnpm add @sentinel/browser
+pnpm add @vigil-monitor/browser
 ```

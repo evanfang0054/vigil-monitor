@@ -34,7 +34,7 @@
     "baseUrl": ".",
     // 路径映射，相对于baseUrl
     "paths": {
-      "@sentinel/*": ["packages/*/src"]
+      "@vigil-monitor/*": ["packages/*/src"]
     },
     // 生成相应的'.d.ts'文件
     "declaration": true,

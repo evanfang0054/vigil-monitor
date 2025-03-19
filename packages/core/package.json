@@ -1,5 +1,5 @@
 {
-  "name": "@sentinel/core",
+  "name": "@vigil-monitor/core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
