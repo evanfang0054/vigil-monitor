@@ -1,0 +1,23 @@
+{
+  "name": "@sentinel/browser",
+  "version": "0.0.1",
+  "description": "浏览器端性能监控",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "build": "",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "sentinel",
+    "browser"
+  ],
+  "author": "evanfang",
+  "license": "MIT"
+}

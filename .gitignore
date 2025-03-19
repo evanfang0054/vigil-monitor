@@ -46,6 +46,7 @@ packages/**/dist
 .dumi/tmp
 .dumi/tmp-production
 .cspellcache
+.turbo
 
 # OS generated files
 .DS_Store

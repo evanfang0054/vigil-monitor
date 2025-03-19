@@ -2,16 +2,20 @@
   "name": "sentinel",
   "private": true,
   "version": "0.0.1",
+  "packageManager": "pnpm@8.15.4",
   "description": "前端实时多维度监控分析告警，采集处理性能错误用户行为资源数据，提升系统稳定性与用户体验全流程。",
   "author": "evanfang",
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
-    "build": "pnpm -r build",
-    "dev": "pnpm -r dev",
-    "clean": "pnpm -r clean",
-    "format": "lint-staged"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "clean": "turbo run clean",
+    "format": "lint-staged",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "turbo run build && changeset publish"
   },
   "publishConfig": {
     "access": "public",
@@ -41,6 +45,8 @@
     "husky": "^9.1.1",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "conventional-changelog-conventionalcommits": "^4.5.0"
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "@changesets/cli": "^2.28.1",
+    "turbo": "^2.4.4"
   }
 }
