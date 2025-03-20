@@ -617,24 +617,89 @@ const getDeviceScreenColorDepth = () => {
 };
 ```
 
-### 页面性能指标可视化
+- 网络信息
+
+```ts
+// 网络信息
+const getNetworkInfo = () => {
+  return navigator.connection;
+};
+```
+
+- 页面信息
+
+```ts
+// 页面信息
+const getPageInfo = () => {
+  const { host, hostname, href, protocol, origin, port, pathname, search, hash } = location;
+  const { width, height } = window.screen;
+
+  return {
+    host,
+    hostname,
+    href,
+    protocol,
+    origin,
+    port,
+    pathname,
+    search,
+    hash,
+    userAgent: 'userAgent' in navigator ? navigator.userAgent : '',
+    screenResolution: `${width}x${height}`,
+  };
+};
+```
 
 ### 数据处理
 
-- 数据上报
-  xhr
-  image
-  sendBeacon
+#### 数据上报
 
-- 数据清洗
-  阀值过滤
+需要考虑上报时机，比如基于微任务上报，避免阻塞页面加载
 
-- 数据持久化
-  存入数据库
+- xhr
 
-- 数据可视化
-  看板图表
-  邮件报表
+```ts
+const xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://example.com/api/report', true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({ data: 'report data' }));
+```
+
+- image(主流上报方式)
+
+```ts
+// 1*1像素图片
+const data = new URLSearchParams({
+  type: 'performance',
+  data: JSON.stringify({ data: 'report data' }),
+});
+const image = new Image();
+image.src = `https://example.com/api/report?${data}`;
+image.onload = () => {
+  console.log('上报成功');
+};
+```
+
+- sendBeacon
+
+```ts
+navigator.sendBeacon('https://example.com/api/report', JSON.stringify({ data: 'report data' }));
+```
+
+#### 数据清洗
+
+- 阀值过滤
+
+#### 数据持久化
+
+- 存入数据库
+
+#### 数据可视化
+
+- 看板图表
+- 邮件报表
+
+### 页面性能指标可视化
 
 ## 项目结构
 
