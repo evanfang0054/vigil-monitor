@@ -3,7 +3,7 @@
     // 指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES6'/'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
     "target": "ES5",
     // 指定使用模块: 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'
-    "module": "CommonJS",
+    "module": "ESNext",
     // 选择模块解析策略: 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
     "moduleResolution": "node",
     // 启用实验性的ES装饰器
@@ -40,8 +40,6 @@
     "declaration": true,
     // 生成相应的'.map'文件
     "sourceMap": true,
-    // 指定输出目录
-    "outDir": "dist",
     // 若有未使用的局部变量则抛错
     "noUnusedLocals": true,
     // 若有未使用的参数则抛错

@@ -1,12 +1,27 @@
 {
   "name": "@vigil-monitor/performance-web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "网页性能采集工具",
+  "main": "dist/iife/index.global.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/esm/index.esm.js",
+  "unpkg": "dist/iife/index.global.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:iife": "esbuild src/index.ts --bundle --format=iife --global-name=vigilMonitor --minify --outfile=dist/iife/index.global.js",
+    "build:cjs": "esbuild src/index.ts --bundle --format=cjs --minify --outfile=dist/cjs/index.cjs.js",
+    "build:esm": "esbuild src/index.ts --bundle --format=esm --minify --outfile=dist/esm/index.esm.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build": "pnpm run clean && pnpm run build:iife && pnpm run build:cjs && pnpm run build:esm && pnpm run build:types",
+    "clean": "rimraf dist node_modules"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "vigil-monitor",
+    "performance-web"
+  ],
+  "author": "evanfang",
+  "license": "MIT"
 }
