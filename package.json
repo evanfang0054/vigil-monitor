@@ -21,11 +21,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "lint-staged": {
     "*.{md,json}": [
       "prettier --write --no-error-on-unmatched-pattern"
@@ -35,6 +30,9 @@
     "@changesets/cli": "^2.28.1",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@efdev/config-commitlint": "^1.0.0",
+    "@efdev/config-markdownlint": "^1.0.0",
+    "@efdev/config-stylelint": "^1.0.0",
     "@types/node": "^20.9.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
@@ -42,7 +40,7 @@
     "cross-env": "^7.0.2",
     "esbuild": "^0.25.1",
     "eslint": "^8.56.0",
-    "husky": "^9.1.1",
+    "husky": "9.1.1",
     "lint-staged": "^13.0.3",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",

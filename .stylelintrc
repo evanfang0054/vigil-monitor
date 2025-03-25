@@ -1,0 +1,3 @@
+{
+  "extends": "@efdev/config-stylelint"
+}
