@@ -1,9 +1,9 @@
 export interface PerformanceWebParams {
-  url: string
+  url: string;
 }
 
 const performanceWeb = (params: PerformanceWebParams) => {
-  console.log('performanceWeb', params)
-}
+  console.log('performanceWeb', params);
+};
 
-export default performanceWeb
+export default performanceWeb;
