@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@efdev/config-commitlint']
-}
+  extends: ['@efdev/config-commitlint'],
+};
