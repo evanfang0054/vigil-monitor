@@ -52,12 +52,7 @@
     "lib": ["ES6", "DOM"]
   },
   // 需要编译的文件
-  "include": [
-    "packages/*/src/**/*.ts",
-    "packages/*/src/**/*.tsx",
-    "packages/*/src/**/*.js",
-    "packages/*/src/**/*.jsx"
-  ],
+  "include": ["packages/*/src/**/*.ts", "packages/*/src/**/*.tsx"],
   // 需要排除的文件
   "exclude": ["node_modules", "dist"]
 }
